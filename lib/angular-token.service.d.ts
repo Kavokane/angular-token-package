@@ -11,6 +11,7 @@ export declare class AngularTokenService implements CanActivate {
     get currentUserType(): string;
     get currentUserData(): UserData;
     get currentAuthData(): AuthData;
+    set currentAuthData(authData: AuthData);
     get apiBase(): string;
     get tokenOptions(): AngularTokenOptions;
     set tokenOptions(options: AngularTokenOptions);
@@ -21,6 +22,7 @@ export declare class AngularTokenService implements CanActivate {
     private global;
     private localStorage;
     constructor(http: HttpClient, config: any, platformId: Object, activatedRoute: ActivatedRoute, router: Router);
+    updateCurrentAuthData(authData: AuthData): void;
     userSignedIn(): boolean;
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean;
     /**

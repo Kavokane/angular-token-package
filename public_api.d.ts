@@ -2,4 +2,5 @@ export { SignInData, RegisterData, UpdatePasswordData, ResetPasswordData, UserTy
 export { ANGULAR_TOKEN_OPTIONS } from './lib/angular-token.token';
 export { AngularTokenService } from './lib/angular-token.service';
 export { AngularTokenModule } from './lib/angular-token.module';
+export { AngularTokenInterceptor } from './lib/angular-token.interceptor';
 //# sourceMappingURL=public_api.d.ts.map

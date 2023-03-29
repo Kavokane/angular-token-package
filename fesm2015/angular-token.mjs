@@ -87,6 +87,11 @@ class AngularTokenService {
     get currentAuthData() {
         return this.authData.value;
     }
+    set currentAuthData(authData) {
+        if (this.checkAuthData(authData)) {
+            this.authData.next(authData);
+        }
+    }
     get apiBase() {
         console.warn('[angular-token] The attribute .apiBase will be removed in the next major release, please use' +
             '.tokenOptions.apiBase instead');
@@ -97,6 +102,11 @@ class AngularTokenService {
     }
     set tokenOptions(options) {
         this.options = Object.assign(this.options, options);
+    }
+    updateCurrentAuthData(authData) {
+        if (this.checkAuthData(authData)) {
+            this.authData.next(authData);
+        }
     }
     userSignedIn() {
         if (this.authData.value == null) {
@@ -593,5 +603,5 @@ AngularTokenModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({});
  * Generated bundle index. Do not edit.
  */
 
-export { ANGULAR_TOKEN_OPTIONS, AngularTokenModule, AngularTokenService };
+export { ANGULAR_TOKEN_OPTIONS, AngularTokenInterceptor, AngularTokenModule, AngularTokenService };
 //# sourceMappingURL=angular-token.mjs.map
