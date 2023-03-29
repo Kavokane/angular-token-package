@@ -1,0 +1,62 @@
+{
+  "name": "angular-token",
+  "version": "14.0.0-beta.0",
+  "repository": "https://github.com/neroniaky/angular-token.git",
+  "author": {
+    "name": "Jan-Philipp Riethmacher",
+    "email": "neroniaky@gmail.com",
+    "url": "https://github.com/neroniaky"
+  },
+  "contributors": [
+    {
+      "name": "Arjen Brandenburgh",
+      "email": "mail@arjenbrandenburgh.nl",
+      "url": "https://github.com/arjenbrandenburgh"
+    },
+    {
+      "name": "Markus Wutzler",
+      "email": "gh@markus-wutzler.de",
+      "url": "https://github.com/mrVVoo"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/neroniaky/angular-token/issues"
+  },
+  "homepage": "https://github.com/neroniaky/angular-token#readme",
+  "keywords": [
+    "angular",
+    "devise token auth",
+    "token authentication"
+  ],
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "peerDependencies": {
+    "@angular/common": "^14.0.0",
+    "@angular/core": "^14.0.0"
+  },
+  "module": "fesm2015/angular-token.mjs",
+  "es2020": "fesm2020/angular-token.mjs",
+  "esm2020": "esm2020/angular-token.mjs",
+  "fesm2020": "fesm2020/angular-token.mjs",
+  "fesm2015": "fesm2015/angular-token.mjs",
+  "typings": "index.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "esm2020": "./esm2020/angular-token.mjs",
+      "es2020": "./fesm2020/angular-token.mjs",
+      "es2015": "./fesm2015/angular-token.mjs",
+      "node": "./fesm2015/angular-token.mjs",
+      "default": "./fesm2020/angular-token.mjs"
+    }
+  },
+  "sideEffects": false,
+  "scripts": {
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy in full compilation mode. This is not allowed.\\nPlease delete and rebuild the package with Ivy partial compilation mode, before attempting to publish.\\n')\" && exit 1"
+  }
+}
